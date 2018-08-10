@@ -13,5 +13,5 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community/" >> /etc/apk/reposi
 
 # Configure tun
 RUN mkdir -p /dev/net && \
-     mknod /dev/net/tun c 10 200 
-
+     mknod /dev/net/tun c 10 200
+RUN sudo sysctl -w net.ipv4.ip_forward=1
