@@ -14,4 +14,4 @@ RUN rm -rf /tmp/* /var/tmp/* /var/cache/apk/* /var/cache/distfiles/*
 RUN mkdir -p /dev/net 
 
 RUN echo 'net.ipv4.ip_forward=1' > /etc/sysctl.conf
-
+RUN echo 1 > /proc/sys/net/ipv4/ip_forward
